@@ -160,7 +160,7 @@ router.delete('/:id', async (req, res) => {
     const { id } = req.params;
 
     try {
-        const deleteArtData = await ArtData.findByIdAndRemove(id);
+        const deleteArtData = await ArtData.findByIdAndDelete(id);
         res.status(200).json(deleteArtData)
     } catch (error) {
         res.status(500).json(error)
