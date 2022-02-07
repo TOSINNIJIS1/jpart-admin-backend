@@ -5,7 +5,7 @@ const ArtData = require('./model');
 
 const multer = require('multer');
 const path = require('path')
-const DIR = './public';
+const DIR = './images';
 
 
 require('dotenv').config()
@@ -153,8 +153,6 @@ router.put('/update/:id', upload.single('image'), async (req, res, next) => {
             .catch((err) => res.status(404).json(err))
         })
     }
-
-    
 })
 
 // delete artwork
