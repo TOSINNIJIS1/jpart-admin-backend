@@ -17,11 +17,14 @@ const ArtSchema = new Schema({
     
     image: {
         type: String,
-    },
-
-    created: {
-        Date
+    }, 
+    timestamps: {
+        createdAt: Date,
+        updatedAt: Date,
     }
+    
+
+    // timestamps: true
 })
 
 
